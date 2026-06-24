@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Elf Name Generator — Ancient Elven Names with Meaning & Lore</title>
+<meta name="description" content="Generate beautiful, unique elf names with AI. Each name comes with its meaning, pronunciation, and elven lore. Perfect for DnD, LOTR fans, writers, and fantasy lovers. Try High Elf, Dark Elf, Wood Elf names and more.">
+<meta name="keywords" content="elf name generator, AI elf names, fantasy name generator, DnD elf names, LOTR elf names, elven name meaning, dark elf names, wood elf names, high elf names, sea elf names, star elf names, shadow elf names, elven name lore">
+<meta name="robots" content="index, follow">
+<meta name="author" content="AI Elf Name Generator">
+<link rel="canonical" href="https://yourdomain.com/">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Elf Name Generator — Names with Soul">
+<meta property="og:description" content="Not just names — stories. Each elven name comes with meaning, pronunciation, and ancient lore. Powered by AI.">
+<meta property="og:url" content="https://yourdomain.com/">
+<meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Elf Name Generator">
+<meta name="twitter:description" content="Generate beautiful elf names with AI — with meaning, pronunciation, and lore.">
+
+<!-- Structured Data: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Elf Name Generator",
+  "description": "Generate unique elven names with AI, complete with meaning, pronunciation, and lore for DnD, LOTR, and fantasy writing.",
+  "url": "https://yourdomain.com/",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<!-- Structured Data: FAQPage for GEO / Featured Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes a good elf name?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Good elf names flow like water — soft consonants, open vowels, and a musical quality. They often contain elements meaning natural phenomena, virtues, or ancestral titles. Names like Aelindra (moonlit path) or Caladwen (radiant maiden) carry both beauty and meaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are High Elf names different from Dark Elf names?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "High Elf names tend to be longer, more melodic, and draw from celestial imagery — stars, light, ancient trees. Dark Elf names are sharper, often containing harder sounds, and reference shadow, silence, or hidden power. Wood Elf names are earthier, echoing seasons, animals, and forest spirits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use AI-generated elf names for DnD or writing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. All generated names are original AI creations for your personal use. They're designed to fit D&D 5e lore, LOTR-inspired settings, and original fantasy worlds alike. Each name is unique to your generation session."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best elf name generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our AI Elf Name Generator stands out because it doesn't just produce random syllable combinations — it creates names with authentic elven phonetics, poetic meanings, pronunciation guides, and unique lore fragments for each name."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What language do elf names come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elven name traditions draw primarily from Tolkien's constructed languages Quenya and Sindarin, as well as D&D's elven language traditions. Our AI synthesizes these phonetic patterns to create names that feel authentically ancient and linguistically consistent."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8D49A;
+    --gold-dim: rgba(201,168,76,0.15);
+    --deep: #0D1117;
+    --surface: #161B22;
+    --surface2: #21262D;
+    --text: #E6EDF3;
+    --text-muted: #8B949E;
+    --border: #30363D;
+    --border-gold: rgba(201,168,76,0.35);
+    --danger: #F0716A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--deep);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ── Starfield ── */
+  #starfield {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; overflow: hidden;
+  }
+  .star {
+    position: absolute; background: #fff; border-radius: 50%;
+    animation: twinkle var(--d, 3s) infinite var(--delay, 0s);
+    opacity: 0;
+  }
+  @keyframes twinkle { 0%,100%{opacity:.08} 50%{opacity:.75} }
+
+  /* ── Layout ── */
+  .page { position: relative; z-index: 1; }
+
+  /* ── Hero ── */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem 2.5rem;
+  }
+  .rune-circle {
+    width: 90px; height: 90px;
+    margin: 0 auto 1.75rem;
+    position: relative;
+  }
+  .rune-ring {
+    position: absolute;
+    border-radius: 50%;
+    animation: spin var(--spd, 20s) linear infinite var(--rev, normal);
+    top: 50%; left: 50%;
+    transform-origin: center center;
+  }
+  .rune-ring-1 {
+    width: 90px; height: 90px;
+    border: 1.5px solid var(--gold);
+    margin-top: -45px; margin-left: -45px;
+    --spd: 22s;
+  }
+  .rune-ring-2 {
+    width: 65px; height: 65px;
+    border: 1px solid rgba(201,168,76,0.4);
+    margin-top: -32.5px; margin-left: -32.5px;
+    --spd: 13s; --rev: reverse;
+  }
+  .rune-core {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--gold);
+  }
+  @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.6rem;
+  }
+  .tagline {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0 1.25rem 2rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+  }
+
+  /* Elf type grid */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.55rem;
+    margin-bottom: 1.25rem;
+  }
+  .type-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.7rem 0.5rem 0.6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .type-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .type-btn.active {
+    background: var(--gold-dim);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .elf-icon { display: block; font-size: 1.3rem; margin-bottom: 3px; }
+
+  /* Gender row */
+  .gender-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .gender-btn {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.55rem 0.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+  }
+  .gender-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .gender-btn.active {
+    background: var(--gold-dim);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* Generate button */
+  .generate-btn {
+    width: 100%;
+    padding: 1.05rem;
+    background: linear-gradient(135deg, #8B6914, var(--gold), #C9A84C);
+    border: none;
+    border-radius: 12px;
+    color: #0D0A02;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .generate-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,168,76,0.3); }
+  .generate-btn:active { transform: translateY(0); }
+  .generate-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+    display: none;
+  }
+  .loading-dots::after {
+    content: '';
+    animation: dots 1.5s steps(3, end) infinite;
+  }
+  @keyframes dots { 0%{content:''} 33%{content:'.'} 66%{content:'..'} 100%{content:'...'} }
+
+  /* Error */
+  .error-msg {
+    text-align: center;
+    color: var(--danger);
+    padding: 1rem;
+    font-size: 0.85rem;
+    display: none;
+  }
+
+  /* ── Results ── */
+  .results {
+    display: none;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 1.25rem 3rem;
+  }
+  .results-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .results-title {
+    font-family: 'Cinzel', serif;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0.75rem auto 0;
+  }
+
+  .names-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1rem;
+  }
+
+  /* Name card */
+  .name-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.35rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
+  }
+  @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } from { opacity: 0; transform: translateY(8px); } }
+  .name-card:nth-child(1){animation-delay:.05s}
+  .name-card:nth-child(2){animation-delay:.1s}
+  .name-card:nth-child(3){animation-delay:.15s}
+  .name-card:nth-child(4){animation-delay:.2s}
+  .name-card:nth-child(5){animation-delay:.25s}
+  .name-card:nth-child(6){animation-delay:.3s}
+
+  .name-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .name-card:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  }
+  .name-card:hover::before { opacity: 1; }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.3rem;
+  }
+  .card-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--gold-light);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .copy-icon {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    padding-top: 4px;
+    flex-shrink: 0;
+  }
+  .name-card:hover .copy-icon { opacity: 1; }
+
+  .card-pronunciation {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+  .card-meaning {
+    font-size: 0.87rem;
+    color: var(--text);
+    line-height: 1.55;
+    margin-bottom: 0.85rem;
+    font-weight: 400;
+  }
+  .card-lore {
+    font-size: 0.79rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    border-top: 1px solid var(--border);
+    padding-top: 0.85rem;
+    font-style: italic;
+    margin-bottom: 0.85rem;
+  }
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .tag {
+    background: var(--gold-dim);
+    border: 1px solid rgba(201,168,76,0.25);
+    color: var(--gold);
+    font-size: 0.62rem;
+    padding: 2px 9px;
+    border-radius: 30px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Regenerate row */
+  .regen-row {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .regen-btn {
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    color: var(--gold);
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    transition: all 0.2s;
+  }
+  .regen-btn:hover { background: var(--gold-dim); }
+
+  /* Copy toast */
+  .toast {
+    position: fixed;
+    bottom: 2rem; left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--gold);
+    color: #0D0A02;
+    padding: 0.6rem 1.6rem;
+    border-radius: 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    transition: transform 0.3s cubic-bezier(.34,1.56,.64,1);
+    z-index: 200;
+    pointer-events: none;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* ── SEO Content Section ── */
+  .content-section {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .content-section h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.9rem;
+    margin-top: 2rem;
+  }
+  .content-section h2:first-child { margin-top: 0; }
+  .content-section p {
+    color: var(--text-muted);
+    font-size: 0.87rem;
+    line-height: 1.85;
+    margin-bottom: 0.9rem;
+  }
+  .content-section strong { color: var(--text); font-weight: 500; }
+
+  /* FAQ */
+  .faq-list { margin-top: 0.5rem; }
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    overflow: hidden;
+  }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    background: var(--surface);
+    padding: 0.9rem 1rem;
+    font-size: 0.87rem;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.2s;
+    gap: 0.5rem;
+  }
+  .faq-q:hover { color: var(--gold); }
+  .faq-q .arrow {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .faq-item.open .arrow { transform: rotate(180deg); }
+  .faq-a {
+    display: none;
+    padding: 0.9rem 1rem;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    background: var(--surface2);
+    border-top: 1px solid var(--border);
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* Elf types description cards */
+  .type-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .type-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .type-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+  .type-card p {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: var(--text-muted);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    border-top: 1px solid var(--border);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ── Responsive ── */
+  @media (max-width: 480px) {
+    .type-grid { grid-template-columns: repeat(2, 1fr); }
+    .names-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Starfield -->
+<div id="starfield" aria-hidden="true"></div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="rune-circle" aria-hidden="true">
+      <div class="rune-ring rune-ring-1"></div>
+      <div class="rune-ring rune-ring-2"></div>
+      <div class="rune-core"></div>
+    </div>
+    <h1>AI Elf Name Generator</h1>
+    <p class="tagline">Ancient Names · Deep Meanings · Living Lore</p>
+  </header>
+
+  <!-- CONTROLS -->
+  <main>
+    <section class="controls" aria-label="Name generator options">
+      <p class="section-label">Choose your elf type</p>
+      <div class="type-grid" role="group" aria-label="Elf type selection">
+        <button class="type-btn active" data-type="High Elf" onclick="selectType(this)" aria-pressed="true">
+          <span class="elf-icon" aria-hidden="true">✦</span>High Elf
+        </button>
+        <button class="type-btn" data-type="Wood Elf" onclick="selectType(this)" aria-pressed="false">
+          <span class="elf-icon" aria-hidden="true">🌿</span>Wood Elf
+        </button>
+        <button class="type-btn" data-type="Dark Elf" onclick="selectType(this)" aria-pressed="false">
+          <span class="elf-icon" aria-hidden="true">🌑</span>Dark Elf
+        </button>
+        <button class="type-btn" data-type="Sea Elf" onclick="selectType(this)" aria-pressed="false">
+          <span class="elf-icon" aria-hidden="true">🌊</span>Sea Elf
+        </button>
+        <button class="type-btn" data-type="Star Elf" onclick="selectType(this)" aria-pressed="false">
+          <span class="elf-icon" aria-hidden="true">★</span>Star Elf
+        </button>
+        <button class="type-btn" data-type="Shadow Elf" onclick="selectType(this)" aria-pressed="false">
+          <span class="elf-icon" aria-hidden="true">◈</span>Shadow Elf
+        </button>
+      </div>
+
+      <p class="section-label">Gender preference</p>
+      <div class="gender-row" role="group" aria-label="Gender preference">
+        <button class="gender-btn active" data-gender="any" onclick="selectGender(this)" aria-pressed="true">Any</button>
+        <button class="gender-btn" data-gender="feminine" onclick="selectGender(this)" aria-pressed="false">Feminine</button>
+        <button class="gender-btn" data-gender="masculine" onclick="selectGender(this)" aria-pressed="false">Masculine</button>
+        <button class="gender-btn" data-gender="neutral" onclick="selectGender(this)" aria-pressed="false">Neutral</button>
+      </div>
+
+      <button class="generate-btn" id="genBtn" onclick="generateNames()">
+        ⟡ &nbsp;Generate Elven Names
+      </button>
+
+      <div class="loading" id="loading" role="status" aria-live="polite">
+        <span class="loading-dots">Weaving names from ancient syllables</span>
+      </div>
+      <div class="error-msg" id="errorMsg" role="alert">
+        ✦ The ancient magic faltered. Please try again.
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results" id="results" aria-label="Generated elf names">
+      <div class="results-header">
+        <p class="results-title">✦ &nbsp;Your Elven Names &nbsp;✦</p>
+        <div class="divider"></div>
+      </div>
+      <div class="names-grid" id="namesGrid"></div>
+      <div class="regen-row">
+        <button class="regen-btn" onclick="generateNames()">⟡ Generate New Names</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEO CONTENT -->
+  <article class="content-section">
+
+    <h2>What Is an Elf Name Generator?</h2>
+    <p>An elf name generator creates original elven names inspired by fantasy traditions — from Tolkien's Quenya and Sindarin languages to D&amp;D's rich elven cultures. Unlike basic random syllable generators, our <strong>AI elf name generator</strong> crafts names with real phonetic structure, poetic meanings, pronunciation guides, and unique lore fragments for every single name.</p>
+    <p>Whether you need a <strong>DnD elf name</strong>, a name for your fantasy novel character, or you're simply curious what your elven name would be — our tool delivers names that feel genuinely earned, not randomly assembled.</p>
+
+    <h2>Types of Elf Names</h2>
+    <div class="type-cards">
+      <div class="type-card">
+        <h3>✦ High Elf Names</h3>
+        <p>Long, melodic, and celestial. High elf names carry echoes of ancient courts and starlight — names borne by nobles, scholars, and immortal warriors.</p>
+      </div>
+      <div class="type-card">
+        <h3>🌿 Wood Elf Names</h3>
+        <p>Earthy and flowing. Wood elf names echo the seasons, forest spirits, and ancient trees. Shorter syllables, closer to nature's breath.</p>
+      </div>
+      <div class="type-card">
+        <h3>🌑 Dark Elf Names</h3>
+        <p>Sharp consonants, shadowed meanings. Dark elf (Drow) names reference silence, venom, hidden power — and the cold beauty of underground realms.</p>
+      </div>
+      <div class="type-card">
+        <h3>🌊 Sea Elf Names</h3>
+        <p>Fluid and open-voweled. Sea elf names carry the rhythm of tides and the memory of sunken cities beneath the waves.</p>
+      </div>
+      <div class="type-card">
+        <h3>★ Star Elf Names</h3>
+        <p>Rare and luminous. Star elf names are drawn from constellations, cosmic phenomena, and the language spoken before the world had a sun.</p>
+      </div>
+      <div class="type-card">
+        <h3>◈ Shadow Elf Names</h3>
+        <p>Ambiguous and layered. Shadow elf names exist between light and dark — names that hide their true meaning in plain sight.</p>
+      </div>
+    </div>
+
+    <h2>What Makes a Good Elf Name?</h2>
+    <p>The best elf names share several qualities. They flow like water — soft consonants (L, R, N, V) balanced with open vowels (A, E, I). They carry <strong>embedded meaning</strong>, often translating to natural phenomena, virtues, or ancestral imagery. And they feel timeless — as if the name existed before it was given to anyone in particular.</p>
+    <p>Classic examples: <em>Aelindra</em> ("she who walks the moonlit path"), <em>Caladwen</em> ("radiant maiden of light"), <em>Thalindor</em> ("keeper of the silver rivers"). Each name is a compressed poem.</p>
+
+    <h2>Elven Naming Traditions</h2>
+    <p>In Tolkien's lore, elves often received <strong>two names</strong>: a given name (amilessë) from their mother, and a name they chose themselves (epessë) based on their deeds or character. In D&amp;D, elves carry both a personal name and a family name, with some cultures adding an honorary title earned through great acts.</p>
+    <p>Our AI draws from both traditions — and from original elven linguistics — to craft names that feel rooted in a coherent cultural logic, not random invention.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          What makes a good elf name?
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a" role="region">
+          Good elf names flow like water — soft consonants, open vowels, and a musical quality. They often contain elements meaning natural phenomena, virtues, or ancestral titles. Names like <em>Aelindra</em> (moonlit path) or <em>Caladwen</em> (radiant maiden) carry both beauty and meaning, feeling like compressed poetry rather than invented syllables.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          How are High Elf names different from Dark Elf names?
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a" role="region">
+          High Elf names tend to be longer, more melodic, and draw from celestial imagery — stars, light, ancient trees. Dark Elf (Drow) names are sharper, often containing harder sounds and consonant clusters, referencing shadow, silence, or hidden power. Wood Elf names are earthier, echoing seasons, animals, and forest spirits.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Can I use these names for DnD, writing, or games?
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a" role="region">
+          Absolutely. All generated names are original AI creations for your personal use. They're designed to fit D&amp;D 5e lore, LOTR-inspired settings, and original fantasy worlds. Each name is unique to your session — click to copy and use it anywhere.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          What language do elf names come from?
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a" role="region">
+          Elven name traditions draw primarily from Tolkien's constructed languages Quenya and Sindarin, as well as D&amp;D's elven language traditions. Our AI synthesizes these phonetic patterns — recognizing the underlying rules of how elven sounds work — to create names that feel authentically ancient and linguistically consistent.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          What is the best elf name generator?
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a" role="region">
+          Our AI Elf Name Generator stands out because it doesn't produce random syllable combinations. It creates names with authentic elven phonetics, poetic meanings, pronunciation guides, and unique lore fragments — so every name you generate has a story behind it.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          How do I pronounce elf names?
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-a" role="region">
+          Every name generated includes a pronunciation guide in plain English (e.g., "ay-LIN-dra"). In Tolkien's Elvish, vowels are generally pronounced clearly and consistently — A as in "father," E as in "bed," I as in "machine." The accent typically falls on the penultimate (second-to-last) syllable.
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <footer>
+    <p>✦ &nbsp;AI Elf Name Generator — Crafting names since ancient times &nbsp;✦</p>
+    <p style="margin-top:0.5rem">
+      <a href="/high-elf-names">High Elf Names</a> &nbsp;·&nbsp;
+      <a href="/dark-elf-names">Dark Elf Names</a> &nbsp;·&nbsp;
+      <a href="/wood-elf-names">Wood Elf Names</a> &nbsp;·&nbsp;
+      <a href="/dnd-elf-names">DnD Elf Names</a>
+    </p>
+  </footer>
+
+</div><!-- .page -->
+
+<!-- Copy toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">✦ Name copied!</div>
+
+<script>
+/* Starfield */
+(function(){
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 100; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const sz = Math.random() * 2 + 0.8;
+    s.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${(Math.random()*4+2).toFixed(1)}s;--delay:${(Math.random()*6).toFixed(1)}s`;
+    sf.appendChild(s);
+  }
+})();
+
+/* State */
+let elfType = 'High Elf';
+let gender = 'any';
+
+function selectType(btn) {
+  document.querySelectorAll('.type-btn').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('active');
+  btn.setAttribute('aria-pressed', 'true');
+  elfType = btn.dataset.type;
+}
+
+function selectGender(btn) {
+  document.querySelectorAll('.gender-btn').forEach(b => {
+    b.classList.remove('active');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('active');
+  btn.setAttribute('aria-pressed', 'true');
+  gender = btn.dataset.gender;
+}
+
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+}
+
+/* Generate */
+async function generateNames() {
+  const btn = document.getElementById('genBtn');
+  const loading = document.getElementById('loading');
+  const results = document.getElementById('results');
+  const grid = document.getElementById('namesGrid');
+  const err = document.getElementById('errorMsg');
+
+  btn.disabled = true;
+  loading.style.display = 'block';
+  results.style.display = 'none';
+  err.style.display = 'none';
+
+  const genderNote = gender === 'any'
+    ? 'a natural mix of masculine, feminine, and gender-neutral'
+    : gender;
+
+  const prompt = `You are a master of elven linguistics, lore, and naming conventions across Tolkien's Quenya/Sindarin traditions and D&D elven cultures.
+
+Generate exactly 6 original ${elfType} names with ${genderNote} sensibility.
+
+Return ONLY valid JSON with no markdown fences, no explanation, no preamble. Exactly this structure:
+{
+  "names": [
+    {
+      "name": "Aelindra",
+      "pronunciation": "ay-LIN-dra",
+      "meaning": "She who walks the moonlit path between two worlds",
+      "lore": "Bearers of this name are said to dream in two languages — one spoken, one forgotten. They are drawn to thresholds: doors, dawns, the edge of forests.",
+      "tags": ["feminine", "celestial", "wanderer"]
+    }
+  ]
+}
+
+Requirements:
+- Names must sound genuinely elven: favor L, R, N, V consonants; A, E, I, AE, EL, AEL vowel clusters
+- Meanings must be poetic, specific, and evocative — not generic ("light" or "shadow" alone is insufficient)
+- Lore must be 1-2 vivid sentences that feel ancient and earned
+- Tags: [gender, one elemental/nature tag, one personality/archetype tag]
+- Vary opening letters — no two names should start the same
+- Calibrate to ${elfType} culture specifically: ${elfType === 'High Elf' ? 'celestial, ancient, noble' : elfType === 'Wood Elf' ? 'earthy, swift, nature-bound' : elfType === 'Dark Elf' ? 'sharp, shadowed, subtly menacing' : elfType === 'Sea Elf' ? 'fluid, tidal, memory-deep' : elfType === 'Star Elf' ? 'cosmic, rare, timelessly luminous' : 'liminal, ambiguous, hidden-meaning'}`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1200,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    if (!res.ok) throw new Error(`API ${res.status}`);
+    const data = await res.json();
+    const raw = data.content.map(c => c.text || '').join('').trim().replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(raw);
+
+    if (!parsed.names || !parsed.names.length) throw new Error('No names returned');
+
+    renderNames(parsed.names);
+    results.style.display = 'block';
+    setTimeout(() => results.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+
+  } catch (e) {
+    console.error(e);
+    err.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    loading.style.display = 'none';
+  }
+}
+
+function renderNames(names) {
+  const grid = document.getElementById('namesGrid');
+  grid.innerHTML = '';
+  names.forEach(n => {
+    const card = document.createElement('article');
+    card.className = 'name-card';
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `${n.name} — ${n.meaning}. Click to copy.`);
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="card-name">${escHtml(n.name)}</div>
+        <span class="copy-icon" aria-hidden="true">copy ✦</span>
+      </div>
+      <div class="card-pronunciation">${escHtml(n.pronunciation)}</div>
+      <div class="card-meaning">${escHtml(n.meaning)}</div>
+      <div class="card-lore">${escHtml(n.lore)}</div>
+      <div class="card-tags">${(n.tags || []).map(t => `<span class="tag">${escHtml(t)}</span>`).join('')}</div>
+    `;
+    card.addEventListener('click', () => copyName(n.name));
+    card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') copyName(n.name); });
+    grid.appendChild(card);
+  });
+}
+
+function escHtml(str) {
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function copyName(name) {
+  navigator.clipboard.writeText(name).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = name; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  });
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2200);
+}
+</script>
+
+</body>
+</html>
