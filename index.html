@@ -10,6 +10,13 @@
 <meta name="author" content="AI Elf Name Generator">
 <link rel="canonical" href="https://www.ai-elf-name-generator.com/">
 
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+
+<!-- Preload fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style">
+
 <!-- Open Graph / Social -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI Elf Name Generator — Names with Soul, Meaning & Ancient Lore">
@@ -139,9 +146,82 @@
 }
 </script>
 
+<!-- Structured Data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Elf Name Generator",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any Browser",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": "AI-generated elf names with meanings, pronunciation guides, lore fragments, favorites system, DnD 5e compatible, 6 elf types"
+}
+</script>
+
+<!-- Structured Data: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Generate Elf Names",
+  "step": [
+    { "@type": "HowToStep", "name": "Choose Elf Type", "text": "Select from High Elf, Wood Elf, Dark Elf, Sea Elf, Star Elf, or Shadow Elf." },
+    { "@type": "HowToStep", "name": "Set Preferences", "text": "Choose gender preference (Any, Feminine, Masculine, Neutral) and quantity (3, 6, or 9 names)." },
+    { "@type": "HowToStep", "name": "Add Keywords (Optional)", "text": "Enter themes like forest, warrior, or starlight to guide the AI." },
+    { "@type": "HowToStep", "name": "Generate and Save", "text": "Click Generate, then save favorites with the heart icon or download your full list." }
+  ]
+}
+</script>
+
+<!-- Structured Data: ItemList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Types of Elf Names",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "High Elf Names", "description": "Long, melodic, and celestial names inspired by ancient courts and starlight." },
+    { "@type": "ListItem", "position": 2, "name": "Wood Elf Names", "description": "Earthy, flowing names that echo seasons and forest spirits." },
+    { "@type": "ListItem", "position": 3, "name": "Dark Elf Names", "description": "Sharp, shadowed names referencing underground beauty and hidden power." },
+    { "@type": "ListItem", "position": 4, "name": "Sea Elf Names", "description": "Fluid, open-voweled names carrying the rhythm of tides." },
+    { "@type": "ListItem", "position": 5, "name": "Star Elf Names", "description": "Rare, luminous names drawn from constellations and cosmic phenomena." },
+    { "@type": "ListItem", "position": 6, "name": "Shadow Elf Names", "description": "Ambiguous, layered names existing between light and dark." }
+  ]
+}
+</script>
+
+<!-- Structured Data: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Elf Name Generator — Fantasy Elven Names with Meaning, Lore & Pronunciation",
+  "description": "Generate unique elven names inspired by Tolkien's Quenya and Sindarin traditions, D&D elven cultures, and original elven linguistics.",
+  "author": { "@type": "Person", "name": "VisionFish" },
+  "publisher": { "@type": "Organization", "name": "AI Elf Name Generator", "url": "https://www.ai-elf-name-generator.com/" },
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-06-27"
+}
+</script>
+
+<!-- Structured Data: ContactPoint -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPoint",
+  "contactType": "customer support",
+  "email": "visionfish@outlook.com",
+  "telephone": "+852-57495090",
+  "areaServed": "Worldwide",
+  "availableLanguage": ["English", "Chinese"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -163,7 +243,7 @@
   --violet-dim:  rgba(139,104,212,0.12);
   --text:        #dde6f0;
   --text-muted:  #7a92a8;
-  --text-faint:  #4a6070;
+  --text-faint:  #5a7080;
   --border:      #1e2e42;
   --danger:      #e05c6a;
   --success:     #3dd6c8;
@@ -1015,6 +1095,35 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .rune-ring, .star, .name-card { animation: none !important; opacity: 1 !important; }
 }
+
+/* Skeleton loading */
+.skeleton-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.skeleton-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { from{transform:translateX(-100%)} to{transform:translateX(100%)} }
+
+/* Saved panel collapse */
+.saved-list.collapsed { display: none; }
+.saved-header .arrow-toggle {
+  color: var(--text-faint);
+  font-size: 0.75rem;
+  transition: transform 0.25s;
+  margin-left: 0.5rem;
+}
+.saved-header.collapsed .arrow-toggle { transform: rotate(-90deg); }
 </style>
 </head>
 <body>
@@ -1022,6 +1131,19 @@ footer {
 <div id="starfield" aria-hidden="true"></div>
 
 <div class="page">
+
+<!-- Skip Navigation -->
+<a href="#generator" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#060a0f;padding:8px 16px;z-index:999;font-size:0.85rem;font-family:'Inter',sans-serif;text-decoration:none;border-radius:0 0 8px 0;">Skip to generator</a>
+<style>.skip-link:focus{top:0;}</style>
+
+<!-- Visible Breadcrumbs -->
+<nav aria-label="Breadcrumb" style="max-width:780px;margin:0.5rem auto 0;padding:0 1.5rem;">
+  <ol style="display:flex;gap:0.5rem;font-size:0.72rem;color:var(--text-faint);list-style:none;flex-wrap:wrap;">
+    <li><a href="/" style="color:var(--gold);text-decoration:none;">Home</a></li>
+    <li style="color:var(--text-faint);">/</li>
+    <li style="color:var(--text-muted);">Elf Name Generator</li>
+  </ol>
+</nav>
 
 <!-- NAV -->
 <nav>
@@ -1106,21 +1228,21 @@ footer {
       <input class="keyword-input" id="keywords" type="text" placeholder="Add themes or traits..." maxlength="80" aria-label="Keywords to guide name generation">
     </div>
 
-    <button class="generate-btn" id="genBtn" onclick="generateNames()">
+    <button class="generate-btn" id="genBtn" onclick="generateNames()" title="Press Ctrl+Enter to generate">
       ⟡ &nbsp;<span id="genBtnText">Generate Elven Names</span>
     </button>
 
     <div class="loading" id="loading" role="status" aria-live="polite">
       <span class="loading-dots" id="loadingText">Weaving names from ancient syllables</span>
     </div>
-    <div class="error-msg" id="errorMsg" role="alert" id="errorText">
+    <div class="error-msg" id="errorMsg" role="alert">
       ✦ The ancient magic faltered. Please try again.
     </div>
   </section>
 
   <!-- SAVED PANEL -->
   <div class="saved-panel" id="savedPanel">
-    <div class="saved-header" onclick="toggleSavedPanel()">
+    <div class="saved-header" onclick="toggleSavedPanel()" id="savedHeader">
       <div>
         <span class="saved-title" id="savedTitle">✦ Saved Names</span>
         <span class="saved-count" id="savedCount">0</span>
@@ -1129,8 +1251,9 @@ footer {
         <button class="saved-btn" onclick="downloadSaved()" id="downloadBtn">⬇ Download</button>
         <button class="saved-btn" onclick="clearSaved()" id="clearBtn">Clear All</button>
       </div>
+      <span class="arrow-toggle" id="savedArrow">▾</span>
     </div>
-    <div class="saved-list" id="savedList">
+    <div class="saved-list collapsed" id="savedList">
       <div class="saved-empty" id="savedEmpty">No saved names yet. Click ♥ on any name to save it.</div>
     </div>
   </div>
@@ -1144,6 +1267,7 @@ footer {
     <div class="action-bar">
       <button class="action-btn" onclick="copyAllNames()" id="copyAllBtn">Copy All Names</button>
       <button class="action-btn" onclick="saveAllNames()" id="saveAllBtn">♥ Save All</button>
+      <button class="action-btn" onclick="shareNames()" id="shareBtn">Share</button>
     </div>
     <div class="names-grid" id="namesGrid"></div>
     <div class="regen-row">
@@ -1206,65 +1330,65 @@ footer {
   <h2 id="faq">Frequently Asked Questions</h2>
   <div class="faq-list">
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-1">
         What is the best AI elf name generator?
         <span class="arrow" aria-hidden="true">▾</span>
       </button>
-      <div class="faq-a" role="region">
+      <div class="faq-a" role="region" id="faq-answer-1">
         Our AI Elf Name Generator stands out because it uses Claude AI to produce names with authentic elven phonetics, poetic meanings, pronunciation guides, and unique lore fragments — so every name generated has a story behind it. It supports six elf archetypes and lets you customize by gender, quantity, and keywords.
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-2">
         What makes a good elf name?
         <span class="arrow" aria-hidden="true">▾</span>
       </button>
-      <div class="faq-a" role="region">
+      <div class="faq-a" role="region" id="faq-answer-2">
         Good elf names flow like water — soft consonants, open vowels, and a musical quality. They contain elements meaning natural phenomena, virtues, or ancestral titles. Names like <em>Aelindra</em> (moonlit path) or <em>Caladwen</em> (radiant maiden) carry both beauty and meaning — compressed poetry rather than invented syllables.
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-3">
         How are High Elf names different from Dark Elf names?
         <span class="arrow" aria-hidden="true">▾</span>
       </button>
-      <div class="faq-a" role="region">
+      <div class="faq-a" role="region" id="faq-answer-3">
         High Elf names are longer, melodic, and celestial — drawing from starlight and ancient courts. Dark Elf (Drow) names use sharper consonants and harsher clusters, referencing shadow and hidden power. Wood Elf names are earthier and shorter, echoing seasons and forest spirits. Sea Elf names use flowing vowels that mirror the rhythm of tides.
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-4">
         Can I use these names for DnD 5e, Pathfinder, or creative writing?
         <span class="arrow" aria-hidden="true">▾</span>
       </button>
-      <div class="faq-a" role="region">
+      <div class="faq-a" role="region" id="faq-answer-4">
         Absolutely. All generated names are original AI creations. They're designed to fit D&amp;D 5e lore, LOTR-inspired settings, Pathfinder campaigns, and original fantasy worlds alike. Each name is unique to your session — click ♥ to save or the copy button to use it anywhere.
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-5">
         What language do elf names come from?
         <span class="arrow" aria-hidden="true">▾</span>
       </button>
-      <div class="faq-a" role="region">
+      <div class="faq-a" role="region" id="faq-answer-5">
         Elven name traditions draw primarily from Tolkien's constructed languages Quenya and Sindarin, as well as D&amp;D's elven language traditions. Our AI synthesizes these phonetic patterns — recognizing the underlying rules of how elven sounds work — to create names that feel authentically ancient and linguistically consistent.
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-6">
         How do I pronounce elf names?
         <span class="arrow" aria-hidden="true">▾</span>
       </button>
-      <div class="faq-a" role="region">
+      <div class="faq-a" role="region" id="faq-answer-6">
         Every generated name includes a pronunciation guide in plain English (e.g., "ay-LIN-dra"). In Tolkien's Elvish, vowels are clear and consistent: A as in "father," E as in "bed," I as in "machine." The accent typically falls on the penultimate (second-to-last) syllable. Stressed syllables appear in UPPERCASE.
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" aria-controls="faq-answer-7">
         Can I save and download my elf names?
         <span class="arrow" aria-hidden="true">▾</span>
       </button>
-      <div class="faq-a" role="region">
+      <div class="faq-a" role="region" id="faq-answer-7">
         Yes. Click the ♥ button on any name card to save it to your collection. Use "Save All" to save an entire generation at once. Your saved names panel lets you view, manage, and download everything as a .txt file. Your saves are stored locally in your browser.
       </div>
     </div>
@@ -1282,12 +1406,12 @@ footer {
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
-      <a href="/high-elf-names">High Elf Names</a>
-      <a href="/dark-elf-names">Dark Elf Names</a>
-      <a href="/wood-elf-names">Wood Elf Names</a>
-      <a href="/sea-elf-names">Sea Elf Names</a>
-      <a href="/dnd-elf-names">DnD Elf Names</a>
-      <a href="/pathfinder-elf-names">Pathfinder Elf Names</a>
+      <a href="#types">High Elf Names</a>
+      <a href="#types">Dark Elf Names</a>
+      <a href="#types">Wood Elf Names</a>
+      <a href="#types">Sea Elf Names</a>
+      <a href="#secWhat">DnD Elf Names</a>
+      <a href="#secWhat">Pathfinder Elf Names</a>
     </div>
     <div class="footer-col" id="contactCol">
       <h4>Contact</h4>
@@ -1303,9 +1427,16 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <p>✦ &nbsp;AI Elf Name Generator © 2025 &nbsp;·&nbsp; <a href="mailto:visionfish@outlook.com">Contact</a> &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;✦</p>
+    <p>✦ &nbsp;AI Elf Name Generator © 2025 &nbsp;·&nbsp; <a href="mailto:visionfish@outlook.com">Contact</a> &nbsp;·&nbsp; <a href="#privacy">Privacy</a> &nbsp;✦</p>
   </div>
 </footer>
+
+<!-- Privacy Policy -->
+<div id="privacy" class="content-section" style="margin-top:2rem;">
+  <h2>Privacy Policy</h2>
+  <p>We respect your privacy. This website does not collect, store, or transmit any personal data. All saved names are stored locally in your browser using localStorage. No cookies are used for tracking. No analytics are collected. Your generated names and preferences remain entirely on your device.</p>
+  <p>If you have any questions about privacy, please contact us at <a href="mailto:visionfish@outlook.com" style="color:var(--gold);">visionfish@outlook.com</a>.</p>
+</div>
 
 </div><!-- .page -->
 
@@ -1313,6 +1444,114 @@ footer {
 <div class="toast" id="toast" role="status" aria-live="polite">✦ Copied!</div>
 
 <script>
+/* ═══════════════════════════════════════════
+   LOCAL NAME LIBRARY — Fallback when API fails
+   ═══════════════════════════════════════════ */
+const NAME_LIBRARY = {
+  'High Elf': [
+    { name: 'Aelindra', pronunciation: 'ay-LIN-dra', meaning: 'She who walks the moonlit path between two worlds', lore: 'Bearers of this name are said to dream in two languages — one spoken, one forgotten. They are drawn to thresholds: doors, dawns, the edge of forests.', tags: ['feminine', 'celestial', 'wanderer'] },
+    { name: 'Thalindor', pronunciation: 'thal-IN-dor', meaning: 'Keeper of the silver rivers', lore: 'Ancient tales speak of Thalindors who sang the waters into new courses, carving valleys with melody alone.', tags: ['masculine', 'water', 'scholar'] },
+    { name: 'Caladwen', pronunciation: 'kal-AD-wen', meaning: 'Radiant maiden of light', lore: 'Born during the first dawn after the Long Night, Caladwens carry starlight in their hair and warmth in their voices.', tags: ['feminine', 'light', 'healer'] },
+    { name: 'Elandril', pronunciation: 'el-AN-dril', meaning: 'Noble as the morning star', lore: 'Elandrils are said to walk between the waking world and the realm of dreams, gathering stories from sleeping mortals.', tags: ['feminine', 'dream', 'storyteller'] },
+    { name: 'Aerendyl', pronunciation: 'air-EN-dil', meaning: 'Friend of the wind', lore: 'Aerendyls hear the whispers of distant mountains carried on the breeze. They are sought as messengers and scouts.', tags: ['masculine', 'wind', 'messenger'] },
+    { name: 'Luthienna', pronunciation: 'loo-TIH-nna', meaning: 'Song of the eternal spring', lore: 'Where Luthienna walks, winter yields. Her songs coax blossoms from frozen earth and paint color on barren stone.', tags: ['feminine', 'nature', 'bard'] },
+    { name: 'Finwele', pronunciation: 'FIN-weh-leh', meaning: 'Swift as the falling leaf', lore: 'Finweles move with impossible grace — dancers, acrobats, and swordsmen who fight like wind through tall grass.', tags: ['masculine', 'swift', 'warrior'] },
+    { name: 'Aerithiel', pronunciation: 'air-ITH-ee-el', meaning: 'Voice of the ancient oaks', lore: 'Aerithiels can hear the memories stored in the rings of trees. They are the living libraries of the elder forests.', tags: ['feminine', 'nature', 'sage'] },
+    { name: 'Celeborneth', pronunciation: 'seh-LEB-or-net', meaning: 'Silver crown of the heavens', lore: 'Born under a rare celestial alignment, Celeborneths are believed to carry fragments of constellations within their souls.', tags: ['feminine', 'celestial', 'noble'] },
+    { name: 'Myravel', pronunciation: 'myr-AH-vel', meaning: 'Guardian of the hidden gates', lore: 'Myravels stand at the borders between realms, their eyes seeing what mortal vision cannot — the threads that bind worlds together.', tags: ['masculine', 'guardian', 'mystic'] },
+    { name: 'Sylvareth', pronunciation: 'sil-VAR-eth', meaning: 'Whisper of the silverwood', lore: 'Sylvareths are said to have grown from the first tree planted by the elder gods. Their roots run deep in ancient magic.', tags: ['masculine', 'nature', 'elder'] },
+    { name: 'Aelyndra', pronunciation: 'ay-LIN-dra', meaning: 'Dancer of starlight', lore: 'Aelyndras perform rituals under the full moon, their movements tracing constellations that no map has recorded.', tags: ['feminine', 'celestial', 'dancer'] },
+    { name: 'Thaliondre', pronunciation: 'thal-I-on-dreh', meaning: 'Heart of the mountain king', lore: 'Those named Thaliondre possess an unbreakable will, forged in the deep places where even dragons fear to tread.', tags: ['masculine', 'earth', 'leader'] },
+    { name: 'Erendis', pronunciation: 'air-EN-dis', meaning: 'Hope of the western shores', lore: 'Erendises sail beyond the known maps, seeking the mythical gardens where the first elves were born.', tags: ['feminine', 'sea', 'explorer'] },
+    { name: 'Aerandir', pronunciation: 'air-AN-dire', meaning: 'Bearer of the first flame', lore: 'Aerandirs carry a spark of the primordial fire that lit the world. Their touch can warm the coldest winter night.', tags: ['masculine', 'fire', 'sage'] },
+  ],
+  'Wood Elf': [
+    { name: 'Laeglor', pronunciation: 'LAYG-glor', meaning: 'Green blade of the forest', lore: 'Laeglors speak the language of leaves and roots. Forests grow thick and welcoming wherever they walk.', tags: ['masculine', 'nature', 'ranger'] },
+    { name: 'Sylphira', pronunciation: 'sil-FIE-ra', meaning: 'Dance of the autumn wind', lore: 'Sylphiras appear when the first leaves turn gold. They carry the sorrow and beauty of seasonal change.', tags: ['feminine', 'wind', 'harbinger'] },
+    { name: 'Thornwall', pronunciation: 'THORN-wol', meaning: 'Shield of the bramble', lore: 'Thornwalls raise living barriers of thorns and vines. Enemies who face them learn that the forest fights back.', tags: ['masculine', 'earth', 'defender'] },
+    { name: 'Briarwen', pronunciation: 'BY-er-wen', meaning: 'Maiden of the wild thicket', lore: 'Briarwens can slip through any thicket unscathed. Their skin bears faint traceries of bark and leaf.', tags: ['feminine', 'nature', 'stealth'] },
+    { name: 'Oakheart', pronunciation: 'OHK-hart', meaning: 'Spirit bound to the ancient oak', lore: 'Oakhearts are one with the elder trees. When an Oakheart falls, a great tree withers beside them.', tags: ['masculine', 'nature', 'shaman'] },
+    { name: 'Fernwhisper', pronunciation: 'fern-WIS-per', meaning: 'Voice among the forest floor', lore: 'Fernwhispers hear the secrets of moss and mushroom. They are healers who gather remedies from the deepest woods.', tags: ['feminine', 'nature', 'healer'] },
+    { name: 'Mossveil', pronunciation: 'mos-VEEL', meaning: 'Cloaked in living green', lore: 'Mossveils wear the forest as camouflage — literally. They blend so perfectly that even birds sing above them unaware.', tags: ['neutral', 'nature', 'spy'] },
+    { name: 'Brooksong', pronunciation: 'brook-SONG', meaning: 'Melody of the mountain stream', lore: 'Brooksongs carry water in their blood. They can purify any source and call rain from the clearest sky.', tags: ['feminine', 'water', 'bard'] },
+    { name: 'Leafwalker', pronunciation: 'LEEF-wok-er', meaning: 'Treads without a sound', lore: 'Leafwalkers leave no footprints. They move through the forest like shadows, appearing only when they choose.', tags: ['neutral', 'nature', 'rogue'] },
+    { name: 'Thornblade', pronunciation: 'THORN-blade', meaning: 'Edge of the ironwood', lore: 'Thornblades forge weapons from living wood that never dulls. Their bows are grown, not crafted.', tags: ['masculine', 'warrior', 'hunter'] },
+    { name: 'Willowmere', pronunciation: 'WIL-o-meer', meaning: 'Reflection in the still pond', lore: 'Willowmares see truths in still water. Their visions guide lost travelers home and warn of danger ahead.', tags: ['feminine', 'water', 'seer'] },
+    { name: 'Ashenroot', pronunciation: 'ASH-en-root', meaning: 'Survivor of the burned forest', lore: 'Ashenroots rise from ashes. They embody the forest\'s stubborn will to regrow after fire and devastation.', tags: ['masculine', 'nature', 'survivor'] },
+    { name: 'Petalune', pronunciation: 'PET-al-yoon', meaning: 'Moonlight on wildflowers', lore: 'Petaluens bloom with magical flowers wherever they sleep. Their dreams fertilize the earth with wonder.', tags: ['feminine', 'nature', 'dreamer'] },
+    { name: 'Staghorn', pronunciation: 'STAG-horn', meaning: 'Antlers of the forest king', lore: 'Staghorns carry the strength of the great elk. They are protectors of all woodland creatures.', tags: ['masculine', 'nature', 'protector'] },
+    { name: 'Mirkwood', pronunciation: 'MIRK-wood', meaning: 'Shadow of the deep forest', lore: 'Mirkwoods walk where sunlight barely reaches. They are guides through the darkest thickets and keepers of forgotten groves.', tags: ['neutral', 'nature', 'guide'] },
+  ],
+  'Dark Elf': [
+    { name: 'Drizzymae', pronunciation: 'DRIZ-ee-may', meaning: 'Rain of the underground realm', lore: 'Drizzymaes hear the drip of eternal waterfalls in the deep places. They navigate darkness by sound alone.', tags: ['feminine', 'darkness', 'navigator'] },
+    { name: 'Velmora', pronunciation: 'vel-MOR-ah', meaning: 'Shadow woven into flesh', lore: 'Velmoras cast no reflection in mirrors. They move through shadows like fish through dark water.', tags: ['feminine', 'shadow', 'assassin'] },
+    { name: 'Zyphrael', pronunciation: 'ZIF-ray-el', meaning: 'Venom of the deep spider', lore: 'Zyphraels carry poisons that heal as easily as they harm. Their touch can cure or kill with equal precision.', tags: ['masculine', 'poison', 'alchemist'] },
+    { name: 'Nyxara', pronunciation: 'nik-SAR-ah', meaning: 'Daughter of the endless night', lore: 'Nyxaras were born in a cave where no light has ever reached. Their eyes glow faintly in total darkness.', tags: ['feminine', 'darkness', 'mystic'] },
+    { name: 'Kaelthar', pronunciation: 'KAYL-thar', meaning: 'Iron will of the deep', lore: 'Kaelthars are unbreakable under pressure. The deeper they go, the stronger they become.', tags: ['masculine', 'earth', 'warrior'] },
+    { name: 'Shadeborn', pronunciation: 'SHADE-born', meaning: 'Child of the twilight zone', lore: 'Shadeborn exist between the surface world and the underworld. They belong fully to neither realm.', tags: ['neutral', 'shadow', 'outcast'] },
+    { name: 'Murkwater', pronunciation: 'MURK-wot-er', meaning: 'Dark waters of the deep lake', lore: 'Murkwaters can breathe underwater in the deepest caverns. They guard the sunken cities of the old drow empire.', tags: ['masculine', 'water', 'guardian'] },
+    { name: 'Duskveil', pronunciation: 'DUSK-veel', meaning: 'Curtain of fading light', lore: 'Duskveils control the boundary between day and night. Where they walk, twilight stretches endlessly.', tags: ['feminine', 'shadow', 'mage'] },
+    { name: 'Silverspine', pronunciation: 'SIL-ver-spine', meaning: 'Bone-white and beautiful', lore: 'Silverspines are said to have crystalline skeletons. Their bodies are as precious as gemstones to the deep dweomers.', tags: ['neutral', 'darkness', 'warrior'] },
+    { name: 'Gloomwhisper', pronunciation: 'GLOOM-wis-per', meaning: 'Secrets told in darkness', lore: 'Gloomwhispers hear thoughts spoken in the silence between heartbeats. They are the spies of the underground courts.', tags: ['feminine', 'shadow', 'spy'] },
+    { name: 'Ravenmoor', pronunciation: 'RAY-ven-more', meaning: 'Dark moor of the raven king', lore: 'Ravenmoors command flocks of shadow-crows. These birds see everything and report to their master in the dead of night.', tags: ['masculine', 'darkness', 'sorcerer'] },
+    { name: 'Thornshade', pronunciation: 'THORN-shade', meaning: 'Shadow among the thorns', lore: 'Thornshades hide in the darkest thickets, their bodies camouflaged by living brambles that feed on shadow-stuff.', tags: ['neutral', 'shadow', 'hunter'] },
+    { name: 'Velkryn', pronunciation: 'VEL-krin', meaning: 'The unseen blade', lore: 'Velkryns strike from nowhere. Their daggers are made of obsidian so black they absorb all light around them.', tags: ['masculine', 'darkness', 'assassin'] },
+    { name: 'Morathiel', pronunciation: 'mor-ATH-ee-el', meaning: 'Queen of the deep court', lore: 'Morathiels rule the hidden palaces beneath the earth. Their courts are places of terrible beauty and deadly intrigue.', tags: ['feminine', 'darkness', 'noble'] },
+    { name: 'Spidersilk', pronunciation: 'SPY-der-silk', meaning: 'Thread of the great web', lore: 'Spidersilks weave webs of enchanted silk that trap not bodies but memories. Those caught relive their happiest moments forever.', tags: ['feminine', 'shadow', 'weaver'] },
+  ],
+  'Sea Elf': [
+    { name: 'Mariselle', pronunciation: 'mar-ih-SEL', meaning: 'Daughter of the tide', lore: 'Mariselles can read the ocean\'s moods in the smallest ripple. Storms calm when they sing to the waves.', tags: ['feminine', 'water', 'healer'] },
+    { name: 'Coralyn', pronunciation: 'kor-uh-LIN', meaning: 'Heart of the living reef', lore: 'Coralyns grow coral gardens that shelter entire ecosystems. Fish and turtles nest in the structures they cultivate.', tags: ['feminine', 'water', 'gardener'] },
+    { name: 'Tidewell', pronunciation: 'TIDE-well', meaning: 'Well of endless waves', lore: 'Tidewells draw power from the ocean\'s depths. Their magic flows like the tides — constant, inevitable, powerful.', tags: ['masculine', 'water', 'mage'] },
+    { name: 'Shellara', pronunciation: 'shel-AH-ra', meaning: 'Voice of the conch shell', lore: 'Shellaras can summon storms and calm seas with the blast of a conch. Their horns are carved from ancient whale bone.', tags: ['feminine', 'water', 'warrior'] },
+    { name: 'Pearlmoon', pronunciation: 'PEARL-moon', meaning: 'Luminous as the moon on water', lore: 'Pearlmoons carry a pearl that glows with the light of the moon, even on the darkest, cloudiest night.', tags: ['feminine', 'water', 'light'] },
+    { name: 'Wavecrest', pronunciation: 'WAYV-krest', meaning: 'Top of the breaking wave', lore: 'Wavecrests ride ocean swells like surfers on water. They are the fastest sailors in the known world.', tags: ['masculine', 'water', 'sailor'] },
+    { name: 'Seaglint', pronunciation: 'SEE-glint', meaning: 'Sparkle on the ocean surface', lore: 'Seaglints can see through any depth of water. They find sunken treasures and lost ships with effortless vision.', tags: ['neutral', 'water', 'scout'] },
+    { name: 'Brineheart', pronunciation: 'BRINE-hart', meaning: 'Salt in the veins', lore: 'Brinehearts can survive indefinitely underwater. They have built underwater homes in the deepest trenches.', tags: ['masculine', 'water', 'explorer'] },
+    { name: 'Dolphinfang', pronunciation: 'DOL-fin-fang', meaning: 'Playful tooth of the sea', lore: 'Dolphinfangs communicate with all marine mammals. Dolphins, whales, and porpoises answer their calls across leagues.', tags: ['neutral', 'water', 'beastmaster'] },
+    { name: 'Aqualune', pronunciation: 'AH-kwah-loon', meaning: 'Moon of the underwater sky', lore: 'Aqualunes see reflections of the stars in the deep ocean floor. They navigate by underwater constellations.', tags: ['feminine', 'water', 'navigator'] },
+    { name: 'Saltwhisper', pronunciation: 'SOLT-WIS-per', meaning: 'Secrets carried on sea spray', lore: 'Saltwhispers hear the gossip of the ocean — messages carried from coast to coast on the wind and waves.', tags: ['feminine', 'water', 'messenger'] },
+    { name: 'Tidecaller', pronunciation: 'TIDE-kol-er', meaning: 'Summoner of the great waves', lore: 'Tidecallers can raise tsunamis with a gesture. Most use their power only to protect coastal villages from storms.', tags: ['masculine', 'water', 'mage'] },
+    { name: 'Merrowyn', pronunciation: 'MER-o-win', meaning: 'Song of the merfolk', lore: 'Merrowyns sing in a language older than human speech. Their melodies can heal wounds and mend broken bones.', tags: ['feminine', 'water', 'bard'] },
+    { name: 'Oceansong', pronunciation: 'OH-shun-song', meaning: 'The ocean itself given voice', lore: 'Oceansongs are said to be reincarnations of the primordial sea goddess. Where they speak, the tides obey.', tags: ['feminine', 'water', 'prophet'] },
+    { name: 'Reefwalker', pronunciation: 'REEF-wok-er', meaning: 'Stroll across coral kingdoms', lore: 'Reefwalkers walk on the ocean floor as easily as on land. They tend the coral gardens and protect the reef dwellers.', tags: ['neutral', 'water', 'guardian'] },
+  ],
+  'Star Elf': [
+    { name: 'Astrelia', pronunciation: 'as-TREL-ee-ah', meaning: 'Born among the stars', lore: 'Astrelias glow faintly at night, their skin dusted with what looks like stardust. Astronomers recognize their birth chart.', tags: ['feminine', 'celestial', 'prophet'] },
+    { name: 'Novaen', pronunciation: 'no-VAY-en', meaning: 'Child of the stellar explosion', lore: 'Novaens carry the energy of dying stars within them. Their emotions flare bright and hot, illuminating everything around them.', tags: ['masculine', 'celestial', 'mage'] },
+    { name: 'Cosmira', pronunciation: 'koz-MIE-ra', meaning: 'Beauty of the cosmos', lore: 'Cosmiras can see the fabric of spacetime. They perceive the universe as threads of light stretching in every direction.', tags: ['feminine', 'celestial', 'seer'] },
+    { name: 'Stellaris', pronunciation: 'stel-AIR-is', meaning: 'Of the fixed stars', lore: 'Stellarises navigate by the fixed stars — the ones that never move. They find paths through dimensions no map can chart.', tags: ['masculine', 'celestial', 'navigator'] },
+    { name: 'Lumineth', pronunciation: 'loo-MIH-neth', meaning: 'Radiance of the nebula', lore: 'Lumineths are born during meteor showers. Their hair shifts color with the phases of nearby stars.', tags: ['feminine', 'celestial', 'healer'] },
+    { name: 'Voidborn', pronunciation: 'VOID-born', meaning: 'Child of the space between stars', lore: 'Voidborn can step into the emptiness between stars and emerge light-years away. They are the ultimate travelers.', tags: ['neutral', 'celestial', 'traveler'] },
+    { name: 'Solaris', pronunciation: 'so-LAR-is', meaning: 'Fire of the sun', lore: 'Solarises channel sunlight into blades of pure radiance. At noon, they are nearly invincible.', tags: ['masculine', 'celestial', 'warrior'] },
+    { name: 'Nebular', pronunciation: 'neb-YOO-lar', meaning: 'Weaver of the cosmic clouds', lore: 'Nebulars can shape nebulae with their minds. They craft new stars from the raw material of interstellar gas.', tags: ['masculine', 'celestial', 'creator'] },
+    { name: 'Astralis', pronunciation: 'as-TRAL-is', meaning: 'Spirit of the wandering stars', lore: 'Astralises follow the comets. They are said to know the destination of every star that crosses the sky.', tags: ['feminine', 'celestial', 'wanderer'] },
+    { name: 'Galaxia', pronunciation: 'gal-AK-see-ah', meaning: 'Daughter of the spiral galaxy', lore: 'Galaxias see the grand pattern of the cosmos. They understand how every star, planet, and lifeform connects.', tags: ['feminine', 'celestial', 'sage'] },
+    { name: 'Pulsarion', pronunciation: 'pul-SAR-eye-on', meaning: 'Heartbeat of the pulsar', lore: 'Pulsarions pulse with rhythmic energy. Their heartbeat can be heard across vast distances in the vacuum of space.', tags: ['masculine', 'celestial', 'warrior'] },
+    { name: 'Quasaris', pronunciation: 'kwuh-SAR-is', meaning: 'Light of the brightest star', lore: 'Quisarises shine with the intensity of quasars. Blind mortals who gaze upon them claim to see colors that have no name.', tags: ['neutral', 'celestial', 'mage'] },
+    { name: 'Orbithea', pronunciation: 'or-BEE-thee-ah', meaning: 'She who holds the orbits', lore: 'Orbithea can alter the paths of planets. She maintains the delicate balance that keeps worlds from colliding.', tags: ['feminine', 'celestial', 'guardian'] },
+    { name: 'Zenithar', pronunciation: 'ZEN-ith-ar', meaning: 'Peak of the celestial dome', lore: 'Zenithars reach the highest point of any journey. Their prayers ascend farther than any other elf\'s.', tags: ['masculine', 'celestial', 'priest'] },
+    { name: 'Eclipsa', pronunciation: 'e-KLIP-sah', meaning: 'Shadow of the eclipsed sun', lore: 'Eclipsas appear during solar eclipses. They carry the mystery of darkness and light intertwined.', tags: ['feminine', 'celestial', 'mystic'] },
+  ],
+  'Shadow Elf': [
+    { name: 'Umbralis', pronunciation: 'um-BRAL-is', meaning: 'Cloaked in living shadow', lore: 'Umbrales cast shadows that move independently. Their shadows sometimes whisper warnings their voices cannot.', tags: ['masculine', 'shadow', 'rogue'] },
+    { name: 'Phantasma', pronunciation: 'fan-TAZ-mah', meaning: 'Ghost of the twilight realm', lore: 'Phantasmas can pass between the material world and the shadow plane at will. They are diplomats between realities.', tags: ['feminine', 'shadow', 'diplomat'] },
+    { name: 'Gloomfang', pronunciation: 'GLOOM-fang', meaning: 'Tooth of the deep dark', lore: 'Gloomfangs hunt in total darkness where light-dwellers cannot follow. Their senses are sharper than any creature of the sun.', tags: ['masculine', 'shadow', 'hunter'] },
+    { name: 'Twilight', pronunciation: 'TWIL-ایت', meaning: 'The hour between day and night', lore: 'Twilights exist in the perpetual dusk between worlds. They age slowly, if at all, and their eyes hold centuries of observation.', tags: ['neutral', 'shadow', 'sage'] },
+    { name: 'Mirrorglass', pronunciation: 'MIR-er-glas', meaning: 'Transparent as a shadow\'s reflection', lore: 'Mirrorglasses can step through any reflective surface — pools, glass, polished metal — emerging from the shadow side.', tags: ['neutral', 'shadow', 'trickster'] },
+    { name: 'Shadeborn', pronunciation: 'SHADE-born', meaning: 'One born of the shadow realm', lore: 'Shadeborns have a twin in the shadow plane. When one dies, the other feels the loss like a physical wound.', tags: ['masculine', 'shadow', 'mystic'] },
+    { name: 'Duskmantle', pronunciation: 'DUSK-man-tul', meaning: 'Robed in evening twilight', lore: 'Duskmantles weave cloaks from actual shadows. These garments grant perfect invisibility in any light below full daylight.', tags: ['feminine', 'shadow', 'assassin'] },
+    { name: 'Nightveil', pronunciation: 'NITE-veel', meaning: 'Curtain of the longest night', lore: 'Nightveils can extend darkness at will. Cities plunged into eternal night fear their approach — or pray for relief from the sun.', tags: ['feminine', 'shadow', 'mage'] },
+    { name: 'Obsidion', pronunciation: 'ob-SID-eye-on', meaning: 'Forged in volcanic shadow', lore: 'Obsidions have skin like polished obsidian — black, smooth, and razor-sharp. Their blood is liquid magma.', tags: ['masculine', 'shadow', 'warrior'] },
+    { name: 'Echoshade', pronunciation: 'EH-koh-shade', meaning: 'The shadow that echoes', lore: 'Echoshades hear the echoes of actions yet to happen. They warn allies of dangers before they arrive.', tags: ['neutral', 'shadow', 'seer'] },
+    { name: 'Veilwalker', pronunciation: 'VEIL-wok-er', meaning: 'One who walks the boundary', lore: 'Veilwalkers tread the thin line between light and dark. They are mediators in conflicts between sun elves and drow.', tags: ['neutral', 'shadow', 'diplomat'] },
+    { name: 'Shadowmend', pronunciation: 'SHAD-oh-mend', meaning: 'Healer of torn shadows', lore: 'Shadowmends repair damaged shadow magic. They can restore a stolen shadow or mend a rift in the veil between planes.', tags: ['masculine', 'shadow', 'healer'] },
+    { name: 'Murkshadow', pronunciation: 'MURK-shado', meaning: 'The deepest darkness', lore: 'Murkshadows are so shadowed that light bends around them. They are walking voids, and creatures instinctively fear their presence.', tags: ['masculine', 'shadow', 'warrior'] },
+    { name: 'Gloombane', pronunciation: 'GLOOM-bane', meaning: 'Destroyer of shadows', lore: 'Gloombanes are shadow elves who turned against their own kind. They wield light magic that burns like concentrated sunlight.', tags: ['masculine', 'shadow', 'paladin'] },
+    { name: 'Whispershade', pronunciation: 'WHIS-per-shade', meaning: 'A shadow that whispers', lore: 'Whispershades communicate through shadow-gestures — silent signs that convey entire conversations without a sound.', tags: ['feminine', 'shadow', 'spy'] },
+  ],
+};
+
 /* ── Starfield ── */
 (function(){
   const sf = document.getElementById('starfield');
@@ -1348,6 +1587,7 @@ const strings = {
     resultsTitle: '✦  Your Elven Names  ✦',
     copyAll: 'Copy All Names',
     saveAll: '♥ Save All',
+    share: 'Share',
     regen: '⟡ Generate New Names',
     savedTitle: '✦ Saved Names',
     download: '⬇ Download',
@@ -1356,6 +1596,8 @@ const strings = {
     langBtn: '中文',
     copied: '✦ Copied!',
     saved: '✦ Saved!',
+    shared: '✦ Shared!',
+    fallback: '✦ Generating from ancient archives...',
   },
   zh: {
     heroTitle: 'AI精灵名字生成器',
@@ -1370,6 +1612,7 @@ const strings = {
     resultsTitle: '✦  你的精灵名字  ✦',
     copyAll: '复制所有名字',
     saveAll: '♥ 全部收藏',
+    share: '分享',
     regen: '⟡ 重新生成',
     savedTitle: '✦ 已收藏',
     download: '⬇ 下载',
@@ -1378,6 +1621,8 @@ const strings = {
     langBtn: 'English',
     copied: '✦ 已复制！',
     saved: '✦ 已收藏！',
+    shared: '✦ 已分享！',
+    fallback: '✦ 从古籍中生成名字...',
   }
 };
 
@@ -1398,13 +1643,13 @@ function applyLang() {
   document.getElementById('resultsTitle').textContent = s.resultsTitle;
   document.getElementById('copyAllBtn').textContent = s.copyAll;
   document.getElementById('saveAllBtn').textContent = s.saveAll;
+  document.getElementById('shareBtn').textContent = s.share;
   document.getElementById('regenBtn').textContent = s.regen;
   document.getElementById('savedTitle').textContent = s.savedTitle;
   document.getElementById('downloadBtn').textContent = s.download;
   document.getElementById('clearBtn').textContent = s.clearAll;
   document.getElementById('savedEmpty').textContent = s.savedEmpty;
   document.getElementById('langBtn').textContent = s.langBtn;
-  // type/gender btn labels
   document.querySelectorAll('[data-en]').forEach(el => {
     if (el.dataset[lang]) el.textContent = el.dataset[lang];
   });
@@ -1433,6 +1678,31 @@ function toggleFaq(btn) {
   btn.setAttribute('aria-expanded', isOpen);
 }
 
+/* ── Skeleton Loading ── */
+function showSkeleton() {
+  const grid = document.getElementById('namesGrid');
+  const numCards = Math.min(count, 6);
+  grid.innerHTML = '';
+  for (let i = 0; i < numCards; i++) {
+    const skel = document.createElement('div');
+    skel.className = 'skeleton-card';
+    skel.style.animationDelay = (i * 0.05) + 's';
+    grid.appendChild(skel);
+  }
+}
+
+function hideSkeleton() {
+  const grid = document.getElementById('namesGrid');
+  grid.innerHTML = '';
+}
+
+/* ── Local Name Library ── */
+function generateFromLibrary(type, num) {
+  const pool = NAME_LIBRARY[type] || NAME_LIBRARY['High Elf'];
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, Math.min(num, shuffled.length));
+}
+
 /* ── Generate ── */
 async function generateNames() {
   const btn = document.getElementById('genBtn');
@@ -1445,6 +1715,7 @@ async function generateNames() {
   loading.style.display = 'block';
   results.style.display = 'none';
   err.style.display = 'none';
+  showSkeleton();
 
   const genderNote = gender === 'any'
     ? 'a natural mix of masculine, feminine, and gender-neutral'
@@ -1506,6 +1777,7 @@ Requirements:
     if (!parsed.names || !parsed.names.length) throw new Error('No names returned');
 
     currentNames = parsed.names;
+    hideSkeleton();
     renderNames(parsed.names);
     results.style.display = 'block';
     document.getElementById('savedPanel').classList.add('open');
@@ -1513,9 +1785,22 @@ Requirements:
     setTimeout(() => results.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
 
   } catch (e) {
-    console.error(e);
-    err.textContent = strings[lang].error;
-    err.style.display = 'block';
+    console.warn('API failed, using local library:', e.message);
+    // Fallback to local name library
+    hideSkeleton();
+    const fallbackMsg = strings[lang].fallback;
+    loading.style.display = 'none';
+    document.getElementById('loadingText').textContent = fallbackMsg;
+    loading.style.display = 'block';
+    setTimeout(() => {
+      loading.style.display = 'none';
+      currentNames = generateFromLibrary(elfType, count);
+      renderNames(currentNames);
+      results.style.display = 'block';
+      document.getElementById('savedPanel').classList.add('open');
+      renderSaved();
+      setTimeout(() => results.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }, 800);
   } finally {
     btn.disabled = false;
     loading.style.display = 'none';
@@ -1623,7 +1908,12 @@ function renderSaved() {
 }
 
 function toggleSavedPanel() {
-  // just UI visual - panel always visible after first generation
+  const list = document.getElementById('savedList');
+  const header = document.getElementById('savedHeader');
+  const arrow = document.getElementById('savedArrow');
+  const isCollapsed = list.classList.toggle('collapsed');
+  header.classList.toggle('collapsed', isCollapsed);
+  arrow.textContent = isCollapsed ? '▸' : '▾';
 }
 
 function downloadSaved() {
@@ -1636,6 +1926,19 @@ function downloadSaved() {
   a.download = 'elf-names.txt';
   a.click();
   URL.revokeObjectURL(a.href);
+}
+
+/* ── Share ── */
+function shareNames() {
+  if (!currentNames.length) return;
+  const text = currentNames.map(n => n.name).join(', ');
+  const shareData = { title: 'AI Elf Name Generator', text: text, url: window.location.href };
+  if (navigator.share) {
+    navigator.share(shareData).catch(() => {});
+  } else {
+    doClipboard(`${text} — Generated at ${window.location.href}`);
+    showToast(strings[lang].shared);
+  }
 }
 
 /* ── Copy helpers ── */
@@ -1664,6 +1967,14 @@ function showToast(msg) {
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 2200);
 }
+
+/* ── Keyboard Shortcut ── */
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+    e.preventDefault();
+    generateNames();
+  }
+});
 
 /* ── Utility ── */
 function esc(str) {
